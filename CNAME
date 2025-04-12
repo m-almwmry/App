@@ -1,7 +1,13 @@
-my-app.trend-vip.com
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+    
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QSSTV0KCZ"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3QSSTV0KCZ'); </script>
 
 
-<!-- Meta Pixel Code -->
+
+    <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,3 +24,111 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=523258397294474&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل تطبيق ترند كارد</title>
+    
+    <!-- ستايل متطور -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .loading-container {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            max-width: 90%;
+            margin: 20px;
+        }
+        
+        .loader-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 
+                0 4px 15px rgba(0,0,0,0.1),
+                inset 0 0 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .loader-image {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+            border-radius: 50%;
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+        
+        .message {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin: 30px 0 15px;
+            font-weight: 600;
+            line-height: 1.6;
+            padding: 0 15px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.9; }
+        }
+
+        @media (max-width: 480px) {
+            .loader-circle {
+                width: 120px;
+                height: 120px;
+            }
+            .message {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+
+    <!-- كود التوجيه -->
+    <script>
+        const storeUrl = 'https://play.google.com/store/apps/details?id=trendcard.yemoney';
+        
+        setTimeout(() => {
+            window.location.replace(storeUrl);
+        }, 2000);
+        
+        window.onload = () => {
+            const meta = document.createElement('meta');
+            meta.httpEquiv = "refresh";
+            meta.content = `5;url=${storeUrl}`;
+            document.head.appendChild(meta);
+        };
+    </script>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loader-circle">
+            <img src="https://i.ibb.co/sJRbCkWS/image.jpg" 
+                 alt="تطبيق محفظة يلا" 
+                 class="loader-image">
+        </div>
+        <p class="message">جاري تحويلك إلى متجر جوجل<br>لتحميل التطبيق...</p>
+    </div>
+</body>
+</html>
