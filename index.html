@@ -1,27 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QSSTV0KCZ"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3QSSTV0KCZ'); </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QSSTV0KCZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3QSSTV0KCZ');
+    </script>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1676260626348202');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1676260626348202');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,11 +40,10 @@ src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
     <!-- تحسين العرض على وسائل التواصل الاجتماعي -->
     <meta property="og:title" content="تحميل تطبيق ترند كارد">
     <meta property="og:description" content="شحن وشراء البطاقات والخدمات الإلكترونية بسهولة.">
-    
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://i.ibb.co/8dKwZyW/image.png">
 
-    <!-- ستايل متطور -->
+    <!-- ستايل -->
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,7 +57,7 @@ src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
             align-items: center;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-        
+
         .loading-container {
             background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
             padding: 40px;
@@ -62,7 +67,7 @@ src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
             max-width: 90%;
             margin: 20px;
         }
-        
+
         .loader-circle {
             width: 150px;
             height: 150px;
@@ -78,7 +83,7 @@ src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
                 inset 0 0 15px rgba(0,0,0,0.05);
             position: relative;
         }
-        
+
         .loader-image {
             width: 85%;
             height: 85%;
@@ -86,14 +91,20 @@ src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
             border-radius: 50%;
             animation: pulse 1.8s ease-in-out infinite;
         }
-        
+
         .message {
             font-size: 1.4em;
             color: #2c3e50;
-            margin: 30px 0 15px;
+            margin: 30px 0 10px;
             font-weight: 600;
             line-height: 1.6;
             padding: 0 15px;
+        }
+
+        .countdown {
+            font-size: 1.2em;
+            color: #e74c3c;
+            margin-bottom: 15px;
         }
 
         .services {
@@ -137,19 +148,33 @@ src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
         }
     </style>
 
-    <!-- كود التوجيه -->
+    <!-- كود التوجيه والعداد -->
     <script>
         const storeUrl = 'https://play.google.com/store/apps/details?id=trendcard.yemoney';
-        
+
+        // التوجيه بعد 15 ثانية
         setTimeout(() => {
             window.location.replace(storeUrl);
-        }, 2000);
-        
+        }, 15000);
+
+        // نسخة meta لمن لا يملك JavaScript
         window.onload = () => {
             const meta = document.createElement('meta');
             meta.httpEquiv = "refresh";
-            meta.content = `5;url=${storeUrl}`;
+            meta.content = `15;url=${storeUrl}`;
             document.head.appendChild(meta);
+
+            // عداد تنازلي
+            let counter = 15;
+            const countdownEl = document.getElementById('countdown');
+            const interval = setInterval(() => {
+                counter--;
+                if (counter <= 0) {
+                    clearInterval(interval);
+                } else {
+                    countdownEl.textContent = `سيتم تحويلك خلال ${counter} ثانية`;
+                }
+            }, 1000);
         };
     </script>
 </head>
@@ -161,6 +186,7 @@ src="https://www.facebook.com/tr?id=1676260626348202&ev=PageView&noscript=1"
                  class="loader-image">
         </div>
         <p class="message">جاري تحويلك إلى متجر جوجل<br>لتحميل التطبيق...</p>
+        <p class="countdown" id="countdown">سيتم تحويلك خلال 15 ثانية</p>
         <a href="https://play.google.com/store/apps/details?id=trendcard.yemoney" class="download-button">تحميل الآن</a>
         <div class="services">
             <h2>خدمات التطبيق:</h2>
