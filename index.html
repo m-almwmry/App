@@ -152,7 +152,7 @@
         // التوجيه بعد 15 ثانية
         setTimeout(() => {
             window.location.replace(storeUrl);
-        }, 15000);
+        }, 5000);
 
         // meta refresh للمستخدمين بدون JS
         window.onload = () => {
@@ -162,7 +162,7 @@
             document.head.appendChild(meta);
 
             // عداد تنازلي
-            let counter = 15;
+            let counter = 5;
             const countdownEl = document.getElementById('countdown');
             const interval = setInterval(() => {
                 counter--;
@@ -183,7 +183,7 @@
                  class="loader-image">
         </div>
         <p class="message">جاري تحويلك إلى متجر جوجل<br>لتحميل التطبيق...</p>
-        <p class="countdown" id="countdown">سيتم تحويلك خلال 15 ثانية</p>
+        <p class="countdown" id="countdown">سيتم تحويلك خلال 5 ثواني</p>
         <a href="https://play.google.com/store/apps/details?id=trendcard.yemoney" class="download-button">تحميل الآن</a>
         <div class="services">
             <h2>خدمات التطبيق:</h2>
